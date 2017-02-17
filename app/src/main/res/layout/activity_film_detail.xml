@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/activity_film_detail"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.com.example.android.hotfilm.activity.FilmDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/film_title"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="25sp"
+                android:background="@color/detail_name_background"
+                android:text="电影名"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/film_img"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/film_detail_text">
+
+                    <TextView
+                        android:id="@+id/film_name"
+                        style="@style/film_detail_textView"
+                        android:text="电影名称：中文/原本"/>
+                    <TextView
+                        android:id="@+id/film_time"
+                        style="@style/film_detail_textView"
+                        android:text="上映时间：2016.8.29"/>
+                    <TextView
+                        android:id="@+id/film_country"
+                        style="@style/film_detail_textView"
+                        android:text="出产国家：中国"/>
+                    <TextView
+                        android:id="@+id/film_popularity"
+                        style="@style/film_detail_textView"
+                        android:text="popularity:110.649433"/>
+
+                    <TextView
+                        android:id="@+id/film_vote_count"
+                        style="@style/film_detail_textView"
+                        android:text="vote_count: 209"/>
+
+                    <TextView
+                        android:id="@+id/film_vote_average"
+                        style="@style/film_detail_textView"
+                        android:text="vote_average: 5.2"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/film_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="电影简介"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

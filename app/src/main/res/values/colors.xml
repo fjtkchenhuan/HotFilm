@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#444969</color>
+    <color name="colorPrimaryDark">#141621</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="detail_name_background">#159588</color>
+    <item name="gray_drawable" type="drawable">#444969</item>
+
+    <drawable name="transparent">#00000000</drawable>
+    <color name="film_detail_text">#65d5de</color>
+</resources>

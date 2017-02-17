@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">热门电影</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_setting">设置</string>
+    <string name="action_refresh">刷新</string>
+    <string name="pref_kind_label">列表种类</string>
+    <string name="pref_kind_key">kind</string>
+    <string name="pref_popular_label">最新电影</string>
+    <string name="pref_rated_label">高分电影</string>
+    <string name="pref_popular_value">popular</string>
+    <string name="pref_rated_value">top_rated</string>
+    <string name="film_detail">电影详情</string>
+    <string name="film_original_title">original_title: </string>
+    <string name="film_release_date">release_date: </string>
+    <string name="film_original_language">original_language: </string>
+    <string name="film_popularity">popularity: </string>
+    <string name="film_vote_count">vote_count: </string>
+    <string name="film_vote_average">vote_average: </string>
+    <string name="film_overview">overview: </string>
+</resources>
