@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/activity_collect"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.com.example.android.hotfilm.activity.CollectActivity"
+    android:gravity="center">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/very_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="超赞"
+            android:textSize="18sp"
+            android:textColor="#100101"/>
+        <RadioButton
+            android:id="@+id/normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一般"
+            android:textSize="18sp"
+            android:textColor="#100101"/>
+        <RadioButton
+            android:id="@+id/not_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不喜欢"
+            android:textSize="18sp"
+            android:textColor="#100101"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="喜欢"
+        />
+    <Button
+        android:id="@+id/btn_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="喜欢"
+        />
+    <Button
+        android:id="@+id/btn_not_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="喜欢"
+        />
+
+
+</LinearLayout>
+

@@ -24,6 +24,7 @@ import app.com.example.android.hotfilm.bean.FilmIfo;
 public class HotFilmAsyncTask extends AsyncTask<Void,Void,List<FilmIfo.ResultsBean>> {
     private Context context;
     private FilmAdapter adapter;
+    private String kind;
 
     public HotFilmAsyncTask(Context context, FilmAdapter adapter) {
         this.context = context;
@@ -42,7 +43,8 @@ public class HotFilmAsyncTask extends AsyncTask<Void,Void,List<FilmIfo.ResultsBe
         final String API_KEY = "api_key";
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        String kind = sharedPrefs.getString(context.getString(R.string.pref_kind_key),context.getString(R.string.pref_popular_value));
+        kind = sharedPrefs.getString(context.getString(R.string.pref_kind_key),context.getString(R.string.pref_popular_value));
+
         Log.d("HotFilmAsyncTask", kind);
         if ("top_rated".equals(kind)) {
             FILM_BASEURL = "http://api.themoviedb.org/3/movie/top_rated";
@@ -52,6 +54,7 @@ public class HotFilmAsyncTask extends AsyncTask<Void,Void,List<FilmIfo.ResultsBe
                 .appendQueryParameter(FILM_LANGUAGE,language)
                 .appendQueryParameter(API_KEY,api_key)
                 .build();
+
 
         String jsonString = HttpUtils.getJsonString(buildUri.toString());
         Gson gson = new Gson();

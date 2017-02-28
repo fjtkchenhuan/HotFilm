@@ -18,4 +18,5 @@
     <string name="film_vote_count">vote_count: </string>
     <string name="film_vote_average">vote_average: </string>
     <string name="film_overview">overview: </string>
+    <string name="film_collect">电影收藏</string>
 </resources>

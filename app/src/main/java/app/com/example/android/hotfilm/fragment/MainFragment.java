@@ -1,5 +1,6 @@
 package app.com.example.android.hotfilm.fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -64,8 +65,12 @@ public class MainFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         gridView = (GridView) view.findViewById(R.id.gridView);
-        adapter = new FilmAdapter(getContext());
 
+//        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+//        String filmClasses = sharedPrefs.getString(getContext().getString(R.string.pref_kind_label),getContext().getString(R.string.pref_popular_label));
+
+        ProgressDialog progressDialog = ProgressDialog.show(getContext(), "请稍等...", "获取数据中...", true);
+        adapter = new FilmAdapter(getContext(),progressDialog);
     }
 
     @Override
@@ -81,6 +86,4 @@ public class MainFragment extends Fragment {
             gridView.setAdapter(adapter);
         }
     }
-
-
 }

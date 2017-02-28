@@ -1,5 +1,6 @@
 package app.com.example.android.hotfilm.adapter;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.com.example.android.hotfilm.R;
+import app.com.example.android.hotfilm.activity.CollectActivity;
 import app.com.example.android.hotfilm.activity.FilmDetailActivity;
 import app.com.example.android.hotfilm.bean.FilmIfo;
 import app.com.example.android.hotfilm.net.HttpUtils;
@@ -27,9 +29,11 @@ import it.sephiroth.android.library.picasso.Picasso;
 public class FilmAdapter extends BaseAdapter {
     private List<FilmIfo.ResultsBean> Films;
     private Context context;
+    private ProgressDialog dialog;
 
-    public FilmAdapter(Context context) {
+    public FilmAdapter(Context context, ProgressDialog progressDialog) {
         this.context = context;
+        this.dialog = progressDialog;
     }
 
     @Override
@@ -97,6 +101,20 @@ public class FilmAdapter extends BaseAdapter {
             }
         });
 
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(context, CollectActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("bean",film);
+                intent.putExtra("data",bundle);
+                context.startActivity(intent);
+                return true;
+            }
+        });
+
+        dialog.dismiss();
         return view;
     }
 
@@ -108,4 +126,5 @@ public class FilmAdapter extends BaseAdapter {
         Films = new ArrayList<>();
         Films.addAll(film);
     }
+
 }
