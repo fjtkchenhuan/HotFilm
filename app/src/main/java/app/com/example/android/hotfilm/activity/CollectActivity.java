@@ -3,11 +3,9 @@ package app.com.example.android.hotfilm.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +15,7 @@ import app.com.example.android.hotfilm.bean.FilmIfo;
 import app.com.example.android.hotfilm.dao.FilmRecord;
 import app.com.example.android.hotfilm.dao.FilmRepository;
 
-public class CollectActivity extends Activity implements View.OnClickListener{
+public class CollectActivity extends Activity {
 
     private FilmIfo.ResultsBean filmIfo;
     private FilmRepository repository;
@@ -33,9 +31,6 @@ public class CollectActivity extends Activity implements View.OnClickListener{
         filmIfo = getIntent().getBundleExtra("data").getParcelable("bean");
         intiView();
 
-        (findViewById(R.id.btn_like)).setOnClickListener(this);
-        (findViewById(R.id.btn_normal)).setOnClickListener(this);
-        (findViewById(R.id.btn_not_like)).setOnClickListener(this);
     }
 
     private void intiView() {
@@ -72,25 +67,5 @@ public class CollectActivity extends Activity implements View.OnClickListener{
                 finish();
             }
         });
-    }
-
-    @Override
-    public void onClick(View view) {
-       int id = view.getId();
-        List<FilmRecord> filmRecords;
-        switch (id) {
-            case R.id.btn_like:
-                filmRecords = repository.queryFilmTable("very_like");
-                Toast.makeText(this, filmRecords.get(0).getFilmName(), Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.btn_normal:
-                filmRecords = repository.queryFilmTable("normal");
-                Toast.makeText(this, filmRecords.get(0).getFilmName(), Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.btn_not_like:
-                filmRecords = repository.queryFilmTable("not_like");
-                Toast.makeText(this, filmRecords.get(0).getFilmName(), Toast.LENGTH_SHORT).show();
-                break;
-        }
     }
 }

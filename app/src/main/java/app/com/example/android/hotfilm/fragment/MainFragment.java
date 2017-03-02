@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import app.com.example.android.hotfilm.R;
+import app.com.example.android.hotfilm.activity.FilmLovedActivity;
 import app.com.example.android.hotfilm.activity.SettingActivity;
 import app.com.example.android.hotfilm.adapter.FilmAdapter;
 import app.com.example.android.hotfilm.net.HotFilmAsyncTask;
@@ -50,6 +51,11 @@ public class MainFragment extends Fragment {
         }
         if (id == R.id.action_setting) {
             Intent intent = new Intent(getContext(), SettingActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.action_kind) {
+            Intent intent = new Intent(getContext(), FilmLovedActivity.class);
             startActivity(intent);
             return true;
         }

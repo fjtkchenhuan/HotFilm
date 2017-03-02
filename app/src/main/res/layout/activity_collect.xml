@@ -17,47 +17,26 @@
 
         <RadioButton
             android:id="@+id/very_like"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="超赞"
             android:textSize="18sp"
             android:textColor="#100101"/>
         <RadioButton
             android:id="@+id/normal"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="一般"
             android:textSize="18sp"
             android:textColor="#100101"/>
         <RadioButton
             android:id="@+id/not_like"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="不喜欢"
             android:textSize="18sp"
             android:textColor="#100101"/>
 
     </RadioGroup>
-
-    <Button
-        android:id="@+id/btn_like"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="喜欢"
-        />
-    <Button
-        android:id="@+id/btn_normal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="喜欢"
-        />
-    <Button
-        android:id="@+id/btn_not_like"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="喜欢"
-        />
-
-
 </LinearLayout>
 

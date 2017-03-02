@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/activity_film_loved"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.com.example.android.hotfilm.activity.FilmLovedActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/select_btn_not_pressed">
+
+        <Button
+            android:id="@+id/btn_like"
+            style="@style/select_button"
+            android:text="超赞" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#ADADAD" />
+
+        <Button
+            android:id="@+id/btn_normal"
+            style="@style/select_button"
+            android:text="一般" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#ADADAD" />
+
+        <Button
+            android:id="@+id/btn_not_like"
+            style="@style/select_button"
+            android:text="不喜欢" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/loved_film_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+</LinearLayout>

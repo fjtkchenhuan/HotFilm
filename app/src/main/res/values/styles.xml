@@ -55,4 +55,12 @@
         <item name="android:windowCloseOnTouchOutside">false</item>
     </style>
 
+    <style name="select_button">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/select_btn_selector</item>
+    </style>
+
 </resources>

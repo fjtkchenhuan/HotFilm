@@ -22,9 +22,14 @@
         <activity
             android:name=".activity.FilmDetailActivity"
             android:label="@string/film_detail"
-            android:theme="@style/MyAppTheme"/>
+            android:theme="@style/MyAppTheme" />
         <activity
             android:name=".activity.CollectActivity"
-            android:theme="@style/dialog"/>
+            android:theme="@style/dialog" />
+        <activity
+            android:name=".activity.FilmLovedActivity"
+            android:label="@string/action_kind">
+
+        </activity>
     </application>
 </manifest>

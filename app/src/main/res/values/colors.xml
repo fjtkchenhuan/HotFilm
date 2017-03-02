@@ -8,4 +8,7 @@
 
     <drawable name="transparent">#00000000</drawable>
     <color name="film_detail_text">#65d5de</color>
+    <color name="select_btn_pressed">#2b5fd7</color>
+    <color name="select_btn_not_pressed">#93a9dc</color>
+    <color name="translate_btn">#00000000</color>
 </resources>
