@@ -14,7 +14,7 @@ import app.com.example.android.hotfilm.R;
 import app.com.example.android.hotfilm.dao.FilmRecord;
 import app.com.example.android.hotfilm.dao.FilmRepository;
 
-public class FilmLovedActivity extends AppCompatActivity implements View.OnClickListener{
+public class FilmLovedActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ListView listView;
     private FilmRepository repository;
@@ -29,17 +29,13 @@ public class FilmLovedActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_film_loved);
         repository = FilmRepository.getFilmRepository(this);
         filmRecords = new ArrayList<>();
-
         btn1 = (Button) findViewById(R.id.btn_like);
         btn2 = (Button) findViewById(R.id.btn_normal);
         btn3 = (Button) findViewById(R.id.btn_not_like);
-
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
         listView = (ListView) findViewById(R.id.loved_film_listView);
-
-
     }
 
     @Override
@@ -72,8 +68,7 @@ public class FilmLovedActivity extends AppCompatActivity implements View.OnClick
         for (int i = 0; i < filmRecords.size(); i++) {
             titles.add(filmRecords.get(i).getFilmName());
         }
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,titles);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, titles);
         listView.setAdapter(arrayAdapter);
     }
-
 }
